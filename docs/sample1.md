@@ -1,7 +1,10 @@
 # 設計書サンプル
 
 ```plantuml
+@startuml
+hide footbox
 bob -> alice
+@enduml
 ```
 
 ## 簡単な構成

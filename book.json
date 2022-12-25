@@ -4,7 +4,7 @@
     "uml": {
       "format": "png",
       "charset": "UTF-8",
-      "config": "uml/templates/umlskinparam.pu"
+      "nailgun": false
     },
     "toc": {
       "addClass": true,
