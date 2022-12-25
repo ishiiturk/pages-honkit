@@ -2,19 +2,23 @@
 
 HonkitをGithub Pagesで公開するサンプル
 
-# install
+https://ishiiturk.github.io/pages-honkit/
+
+# ローカル
+
+## install
 
 ```
 yarn setup
 ```
 
-# build
+## build
 
 ```
 yarn build
 ```
 
-# ホスティング
+## ホスティング
 
 localhost:4000で公開
 
