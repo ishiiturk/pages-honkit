@@ -1,0 +1,17 @@
+{
+  "plugins": ["uml", "-search", "toc"],
+  "pluginsConfig": {
+    "uml": {
+      "format": "png",
+      "charset": "UTF-8",
+      "config": "uml/templates/umlskinparam.pu"
+    },
+    "toc": {
+      "addClass": true,
+      "className": "toc"
+    }
+  },
+  "styles": {
+    "website": "styles/website.css"
+  }
+}
