@@ -153,25 +153,24 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="2022年度版-設計書に最適なツールは何なのかベストプラクティスを探す旅">2022年度版 設計書に最適なツールは何なのかベストプラクティスを探す旅</h1>
+                                <h1 id="設計書に最適なドローツールは何なのかベストプラクティスを探す">設計書に最適なドローツールは何なのかベストプラクティスを探す</h1>
+<p>終わらない旅です。</p>
 <ul>
 <li>ドキュメントとしての管理・公開スキーム</li>
 <li>シームレスなドキュメント作成と図の編集</li>
 <li>バージョン・変更管理</li>
 </ul>
-<p>にフォーカスしたベスプラのお話です。</p>
+<p>にフォーカスしたベスプラを今年も探してきました。</p>
 <h1 id="結論だけ知りたい人むけ">結論だけ知りたい人むけ</h1>
-<p>Markdown + Honkit + plantuml + VSCode + draw.ioプラグイン が結果最高でした :tada:</p>
-<h1 id="honkitについて">Honkitについて</h1>
-<p>以前、gitbookで設計書を書くお話を<a href="https://akerun.hateblo.jp/entry/2017/12/26/110102" target="_blank">ブログ</a>にしましたが、OSSとしての提供は終了しました
-<a href="https://github.com/GitbookIO/gitbook" target="_blank">https://github.com/GitbookIO/gitbook</a></p>
+<p>Markdown + Honkit + plantuml + VSCode + draw.ioプラグイン が結果最高でした 🎉</p>
+<h2 id="honkitについて">Honkitについて</h2>
+<p>以前、gitbookで設計書を書くお話を<a href="https://akerun.hateblo.jp/entry/2017/12/26/110102" target="_blank">ブログ</a>にしましたが、OSSとしての提供は終了してしまいました。</p>
+<p><a href="https://github.com/GitbookIO/gitbook" target="_blank">Gitbook Legacy</a></p>
 <pre><code>As the efforts of the GitBook team are focused on the GitBook.com platform, the CLI is no longer under active development.
 All content supported by the CLI are mostly supported by our GitBook.com / GitHub integration.
 Content hosted on the legacy.gitbook.com will continue working until further notice. For differences with the new vesion, check out our documentation.
-</code></pre><p>ですが、非常にありがたいことにフォークしたHonkitというツールでメンテされ続けています。</p>
-<p><a href="https://github.com/honkit/honkit" target="_blank">https://github.com/honkit/honkit</a></p>
-<p>移行も簡単なので弊社も光の速さで移行しました</p>
-<p><a href="https://efcl.info/2020/06/19/githon/#:~:text=GitBook%E3%81%8B%E3%82%89HonKit%E3%81%B8%E3%81%AE,%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank">https://efcl.info/2020/06/19/githon/#:~:text=GitBook%E3%81%8B%E3%82%89HonKit%E3%81%B8%E3%81%AE,%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82</a></p>
+</code></pre><p>ですが、非常にありがたいことにフォークした<a href="https://github.com/honkit/honkit" target="_blank">Honkit</a>というツールがメンテされ続けています。</p>
+<p><a href="https://efcl.info/2020/06/19/githon/#:~:text=GitBook%E3%81%8B%E3%82%89HonKit%E3%81%B8%E3%81%AE,%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank">移行も簡単</a>なので弊社も光の速さで移行しました</p>
 <h2 id="ドローツール">ドローツール</h2>
 <p>よく見かけるドローツール</p>
 <ul>
@@ -183,8 +182,8 @@ Content hosted on the legacy.gitbook.com will continue working until further not
 </ul>
 <p>パッケージソフトウェア・Webサービスそれぞれ特徴があります（お値段も）
 描画するツールとしてはどれも良いのですが、</p>
-<p>画像の編集とドキュメントへの埋めこみをシームレスにできるツールは残念ながらほぼありませんでした。</p>
-<p>MS WordとVisioの組み合わせならできそうですが、ドキュメントが大きくなった際のWordの重さがボトルネックです。</p>
+<p>画像の編集とドキュメントへの埋めこみをシームレスにできるツールは残念ながら公式ではほぼありませんでした。</p>
+<p>MS WordとVisioの組み合わせならできそうですが、ドキュメントが大きくなった際のWordの重さがボトルネックです（閲覧者にとってドキュメントを開くまでの時間は重要な体験）。</p>
 <p>その中で、draw.io については以前の<a href="https://akerun.hateblo.jp/entry/2018/06/28/144947" target="_blank">ブログ</a>でも紹介しましたが、更に進化を遂げていました。</p>
 <ul>
 <li>比較的軽量</li>
@@ -215,14 +214,19 @@ Content hosted on the legacy.gitbook.com will continue working until further not
 <li>mermaid</li>
 </ul>
 <p>この中では plantuml に軍配です。mermaidは表現が狭い。やたら図がでかくなるなど、まだまだ課題ありです。GithubのREADMEページがmermaid記法をサポートしたので、ちょっとした図を仕込むにはいいかもしれません。plantumlもサポートしてくれ。</p>
-<p>Honkitはumlプラグインを導入することで、plantuml形式で書けます。また、Markdown Preview Enhancedを追加すれば、Markdownプレビューで一緒に表示してくれます。便利。</p>
+<p>Honkitはumlプラグインを導入することで、plantuml形式で書けます。また、Markdown Preview Enhancedを追加すれば、Markdownプレビューで一緒に表示してくれます。便利です。</p>
 <p><img src="vscode-2.png" alt></p>
 <h2 id="ドキュメントの公開">ドキュメントの公開</h2>
 <p>Honkitでビルドした静的ファイルをホスティングすれば、Webブラウザで閲覧できる設計書のできあがりです。</p>
 <p>簡単にやるなら GithubActionsでビルドしてGitHubPagesで公開するのが最もお手軽です。</p>
+<p><img src="overview.drawio.png" alt></p>
 <p>ただし、GithubPagesはユーザー認証できない（たぶん）ので、情報漏えいにご注意ください。
 さすがに設計書を一般公開するわけにはいかないので、弊社では AWSを活用し、S3にデプロイ・Cloud Frontで認証+HTTPSでのアクセスになるよう設定しています。</p>
-<p>今回のブログもこの記事も<a href="https://github.com/ishiiturk/pages-honkit" target="_blank">Github</a>で公開しています。参考になれば幸い。</p>
+<p><img src="overview2.drawio.png" alt></p>
+<p>今回このブログもHonkit形式にして<a href="https://github.com/ishiiturk/pages-honkit" target="_blank">Github</a>で公開してみました。</p>
+<p>完成形がイメージできてるのもありますが、とても簡単に公開までできました。</p>
+<h1 id="終わらない旅">終わらない旅</h1>
+<p>ツールは日々進化するし、使い慣れたツールが突然使えなくなることもある。ベスプラ探しの旅は来年も続きます。</p>
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
                                 
                                 </section>
@@ -250,7 +254,7 @@ Content hosted on the legacy.gitbook.com will continue working until further not
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ブログ記事","level":"1.2","depth":1,"next":{"title":"設計書サンプル","level":"1.3","depth":1,"path":"docs/sample1.md","ref":"docs/sample1.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["uml","-search","toc"],"pluginsConfig":{"uml":{"format":"png","charset":"UTF-8","nailgun":false,"config":"classic"},"toc":{"addClass":true,"className":"toc"},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css"}},"file":{"path":"docs/blog.md","mtime":"2022-12-25T17:55:49.662Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-25T17:56:00.289Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ブログ記事","level":"1.2","depth":1,"next":{"title":"設計書サンプル","level":"1.3","depth":1,"path":"docs/sample1.md","ref":"docs/sample1.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["uml","-search","toc"],"pluginsConfig":{"uml":{"format":"png","charset":"UTF-8","nailgun":false,"config":"classic"},"toc":{"addClass":true,"className":"toc"},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css"}},"file":{"path":"docs/blog.md","mtime":"2022-12-25T18:19:55.826Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-25T18:20:07.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
