@@ -1,0 +1,321 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>ブログ記事 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sample1.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="blog.html">
+            
+                <a href="blog.html">
+            
+                    
+                    ブログ記事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sample1.html">
+            
+                <a href="sample1.html">
+            
+                    
+                    設計書サンプル
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ブログ記事</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2022年度版-設計書に最適なツールは何なのかベストプラクティスを探す旅">2022年度版 設計書に最適なツールは何なのかベストプラクティスを探す旅</h1>
+<ul>
+<li>ドキュメントとしての管理・公開スキーム</li>
+<li>シームレスなドキュメント作成と図の編集</li>
+<li>バージョン・変更管理</li>
+</ul>
+<p>にフォーカスしたベスプラのお話です。</p>
+<h1 id="結論だけ知りたい人むけ">結論だけ知りたい人むけ</h1>
+<p>Markdown + Honkit + plantuml + VSCode + draw.ioプラグイン が結果最高でした :tada:</p>
+<h1 id="honkitについて">Honkitについて</h1>
+<p>以前、gitbookで設計書を書くお話を<a href="https://akerun.hateblo.jp/entry/2017/12/26/110102" target="_blank">ブログ</a>にしましたが、OSSとしての提供は終了しました
+<a href="https://github.com/GitbookIO/gitbook" target="_blank">https://github.com/GitbookIO/gitbook</a></p>
+<pre><code>As the efforts of the GitBook team are focused on the GitBook.com platform, the CLI is no longer under active development.
+All content supported by the CLI are mostly supported by our GitBook.com / GitHub integration.
+Content hosted on the legacy.gitbook.com will continue working until further notice. For differences with the new vesion, check out our documentation.
+</code></pre><p>ですが、非常にありがたいことにフォークしたHonkitというツールでメンテされ続けています。</p>
+<p><a href="https://github.com/honkit/honkit" target="_blank">https://github.com/honkit/honkit</a></p>
+<p>移行も簡単なので弊社も光の速さで移行しました</p>
+<p><a href="https://efcl.info/2020/06/19/githon/#:~:text=GitBook%E3%81%8B%E3%82%89HonKit%E3%81%B8%E3%81%AE,%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank">https://efcl.info/2020/06/19/githon/#:~:text=GitBook%E3%81%8B%E3%82%89HonKit%E3%81%B8%E3%81%AE,%E3%81%AA%E3%81%A9%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%BE%E3%81%99%E3%80%82</a></p>
+<h2 id="ドローツール">ドローツール</h2>
+<p>よく見かけるドローツール</p>
+<ul>
+<li><a href="https://www.microsoft.com/ja-jp/microsoft-365/visio/flowchart-software" target="_blank">MS Visio</a></li>
+<li><a href="https://www.diagrams.net/" target="_blank">diagrams.net/draw.io</a></li>
+<li><a href="https://cacoo.com/ja/home" target="_blank">cacoo</a></li>
+<li><a href="https://miro.com/ja/" target="_blank">miro</a></li>
+<li><a href="https://astah.change-vision.com/ja/product/astah-uml.html" target="_blank">astah</a></li>
+</ul>
+<p>パッケージソフトウェア・Webサービスそれぞれ特徴があります（お値段も）
+描画するツールとしてはどれも良いのですが、</p>
+<p>画像の編集とドキュメントへの埋めこみをシームレスにできるツールは残念ながらほぼありませんでした。</p>
+<p>MS WordとVisioの組み合わせならできそうですが、ドキュメントが大きくなった際のWordの重さがボトルネックです。</p>
+<p>その中で、draw.io については以前の<a href="https://akerun.hateblo.jp/entry/2018/06/28/144947" target="_blank">ブログ</a>でも紹介しましたが、更に進化を遂げていました。</p>
+<ul>
+<li>比較的軽量</li>
+<li>構成図を書くためのアセットが準備されている（アイコンやクラウドサービスのシンボルなど）</li>
+<li>操作が直感的</li>
+<li>VSCodeのプラグインが最＆高 ← 主にココ</li>
+</ul>
+<p>このプラグイン（非公式ながら）が、前述の「画像の編集とドキュメントへの埋めこみをシームレスに」を実現してくれます。</p>
+<p>また、draw.io のもう一つ進化したポイントが、Webで使用した場合、同時編集が可能になりホワイトボードのような使い方ができるようになりました。これで他のツールに比べて弱点がほぼなくなったと思います。（ステマではありません）</p>
+<p><a href="https://www.diagrams.net/blog/gliffy-vs-drawio" target="_blank">公式ブログより</a>
+<img src="https://www.diagrams.net/assets/img/blog/remote-cursors.gif" alt></p>
+<h2 id="drawio-integration-プラグイン">Draw.io integration プラグイン</h2>
+<p>図を保存するディレクトリに、 [ファイル名].drawio.[画像ファイル拡張子] の形式でファイルを作成します。例えば <code>overview.drawio.png</code> とか。</p>
+<p>そうすると、あら不思議。VSCode上でdrawioを操作して作図できるようになります。</p>
+<p><img src="vscode.png" alt></p>
+<p>これで、VSCode上で</p>
+<ul>
+<li>Draw.ioインテグレーションで図を作成</li>
+<li>Markdownでドキュメント作成</li>
+</ul>
+<p>が可能になりました。個人的にとても気持ちいい。</p>
+<h2 id="コードベースuml">コードベースUML</h2>
+<p>システム構成やクラス図など配置に気を遣う・おしゃれに書きたい場合はドローツールをつかいたいですが、シーケンス図・アクティビティ図はコードベースで書くのがおすすめです。
+理由は主に経験則ですが、ちょい変で構成全体に手が入るような場合、コードベースで書いておいた方がメンテしやすいです。好みもあると思います。</p>
+<p>現在主流は以下の2つ。</p>
+<ul>
+<li>plantuml</li>
+<li>mermaid</li>
+</ul>
+<p>この中では plantuml に軍配です。mermaidは表現が狭い。やたら図がでかくなるなど、まだまだ課題ありです。GithubのREADMEページがmermaid記法をサポートしたので、ちょっとした図を仕込むにはいいかもしれません。plantumlもサポートしてくれ。</p>
+<p>Honkitはumlプラグインを導入することで、plantuml形式で書けます。また、Markdown Preview Enhancedを追加すれば、Markdownプレビューで一緒に表示してくれます。便利。</p>
+<p><img src="vscode-2.png" alt></p>
+<h2 id="ドキュメントの公開">ドキュメントの公開</h2>
+<p>Honkitでビルドした静的ファイルをホスティングすれば、Webブラウザで閲覧できる設計書のできあがりです。</p>
+<p>簡単にやるなら GithubActionsでビルドしてGitHubPagesで公開するのが最もお手軽です。</p>
+<p>ただし、GithubPagesはユーザー認証できない（たぶん）ので、情報漏えいにご注意ください。
+さすがに設計書を一般公開するわけにはいかないので、弊社では AWSを活用し、S3にデプロイ・Cloud Frontで認証+HTTPSでのアクセスになるよう設定しています。</p>
+<p>今回のブログもこの記事も<a href="https://github.com/ishiiturk/pages-honkit" target="_blank">Github</a>で公開しています。参考になれば幸い。</p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sample1.html" class="navigation navigation-next " aria-label="Next page: 設計書サンプル">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ブログ記事","level":"1.2","depth":1,"next":{"title":"設計書サンプル","level":"1.3","depth":1,"path":"docs/sample1.md","ref":"docs/sample1.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["uml","-search","toc"],"pluginsConfig":{"uml":{"format":"png","charset":"UTF-8","nailgun":false,"config":"classic"},"toc":{"addClass":true,"className":"toc"},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css"}},"file":{"path":"docs/blog.md","mtime":"2022-12-25T17:55:49.662Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-25T17:56:00.289Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
