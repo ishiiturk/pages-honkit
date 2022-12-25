@@ -1,7 +1,7 @@
 {
   "recommendations": [
-    "shd101wyy.markdown-preview-enhanced",
     "jebbs.plantuml",
-    "purocean.drawio-preview"
+    "purocean.drawio-preview",
+    "hediet.vscode-drawio"
   ]
 }
