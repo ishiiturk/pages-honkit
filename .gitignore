@@ -27,6 +27,13 @@ node_modules
 # vim swapfile
 *.swp
 
+# Output of documentation
+_book
+
+book.pdf
+book.epub
+book.mobi
+
 # Local Netlify folder
 .netlify
 .DS_Store
