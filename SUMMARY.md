@@ -1,5 +1,4 @@
-# 設計書サンプル
+# 目次
 
-```plantuml
-bob -> alice
-```
+- [Introduction](README.md)
+- [設計書サンプル](docs/sample1.md)
